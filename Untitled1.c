@@ -4,35 +4,33 @@ int tich1(int a, int b);
 int hieu1(int a,int b);
 float thuong1(int a,int b);
 void main(){
-	int tong,tich,hieu,a,b,choice;
+	int tong,tich,hieu,a,b;
+	char choice;
 	float thuong;
 	int x = 1;
 	printf("\nEnter value:");scanf("%d %d",&a,&b);
 	do{
-		printf("\nSum?");
-		printf("\nTich?");
-		printf("\nThuong?");
-		printf("\nHieu?");
 		printf("\nchoice is:");
-		scanf("%d",&choice);
+		fflush(stdin);
+		scanf("%c",&choice);
 	switch(choice){
-		case 1:
+		case '+':
 			tong = tong1(a,b);
 			printf("sum is %d",tong);
 			break;
-		case 2:
+		case '*':
 			tich = tich1(a,b);
 			printf("tich is %d",tich);
 			break;
-		case 3:
+		case '%':
 			thuong = thuong1(a,b);
 			printf("thuong is %f",thuong);
 			break;
-		case 4:
+		case '-':
 			hieu = hieu1(a,b);
 			printf("hieu is %d",hieu);
 			break;
-		case 5:
+		case 'g':
 			x = 0;
 			printf("\t Goodbye");
 			break;
